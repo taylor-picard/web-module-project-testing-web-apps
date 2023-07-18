@@ -31,7 +31,7 @@ test('renders THREE error messages if user enters no values into any fields.', a
     await waitFor(()=> {
         const errMessages = screen.queryAllByTestId('error');
         expect(errMessages).toHaveLength(3);
-    })
+    });
 });
 
 test('renders ONE error message if user enters a valid first name and last name but no email.', async () => {
@@ -81,7 +81,7 @@ test('renders all firstName, lastName and email text when submitted. Does NOT re
         expect(lasttNameDisplay).toBeInTheDocument();
         expect(emailDisplay).toBeInTheDocument();
         expect(messageDisplay).not.toBeInTheDocument();
-    })
+    });
 });
 
 test('renders all fields text when all fields are submitted.', async () => {
@@ -105,5 +105,5 @@ test('renders all fields text when all fields are submitted.', async () => {
         expect(lasttNameDisplay).toBeInTheDocument();
         expect(emailDisplay).toBeInTheDocument();
         expect(messageDisplay).toBeInTheDocument();
-    })
+    });
 });
